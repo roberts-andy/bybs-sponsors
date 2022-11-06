@@ -12,35 +12,35 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 1610302312,
+        "HashCode": -1863055003,
         "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.SponsorForm",
+        "Name": "BlazorApp.Pages.Index",
         "AssemblyName": "BlazorApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "SponsorForm"
+            "TagName": "Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.SponsorForm"
+          "Common.TypeName": "BlazorApp.Pages.Index"
         }
       },
       {
-        "HashCode": 1525197685,
+        "HashCode": 320573651,
         "Kind": "Components.Component",
-        "Name": "BlazorApp.Pages.SponsorForm",
+        "Name": "BlazorApp.Pages.Index",
         "AssemblyName": "BlazorApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorApp.Pages.SponsorForm"
+            "TagName": "BlazorApp.Pages.Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Pages.SponsorForm",
+          "Common.TypeName": "BlazorApp.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -127,39 +127,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "BlazorApp.Shared.SurveyPrompt",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -399172326,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp.Shared.NavMenu",
-        "AssemblyName": "BlazorApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": 2063803907,
-        "Kind": "Components.Component",
-        "Name": "BlazorApp.Shared.NavMenu",
-        "AssemblyName": "BlazorApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorApp.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorApp.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -256,6 +223,39 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "BlazorApp.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -399172326,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Shared.NavMenu",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": 2063803907,
+        "Kind": "Components.Component",
+        "Name": "BlazorApp.Shared.NavMenu",
+        "AssemblyName": "BlazorApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorApp.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorApp.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16576,8 +16576,8 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\github\\bybs-sponsors\\src\\BlazorApp\\Pages\\SponsorForm.razor",
-      "TargetPath": "Pages\\SponsorForm.razor",
+      "FilePath": "c:\\github\\bybs-sponsors\\src\\BlazorApp\\Pages\\Index.razor",
+      "TargetPath": "Pages\\Index.razor",
       "FileKind": "component"
     },
     {
