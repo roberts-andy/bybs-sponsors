@@ -1,9 +1,121 @@
-﻿@page "/"
+@page "/"
+@using Microsoft.Extensions.Logging
+@inject ILogger<Index> Logger
+<PageTitle>Sponsorship Request</PageTitle>
 
-<PageTitle>Index</PageTitle>
+@using BlazorApp.Data
+@using System.Globalization
 
-<h1>Hello, world!</h1>
+<h1>Bolton Youth Baseball and Softball Sponsorship Request</h1>
+<br />
 
-Welcome to your new app.
+<EditForm Model="@sponsorshipRequest" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    <h2>Contact information</h2>
+    <p>
+        <label>
+            Company Name:
+            <InputText @bind-Value="sponsorshipRequest.CompanyName" />
+        </label>
+    </p>
+    <p>
+        <label>
+            Contact Name:
+            <InputText @bind-Value="sponsorshipRequest.ContactName" />
+        </label>
+    </p>
+    <p>
+        <label>
+            Contact Email Address:
+            <InputText @bind-Value="sponsorshipRequest.ContactEmail" />
+            <ValidationMessage For="@(() => sponsorshipRequest.ContactEmail)" />
+        </label>
+    </p>
+    <p>
+        <label>
+            Contact Phone Number:
+            <InputText @bind-Value="sponsorshipRequest.ContactPhone" />
+        </label>
+    </p>
+    <p>
+        <label>
+            Company Mailing Address:
+            <InputText @bind-Value="sponsorshipRequest.MailingAddress" />
+        </label>
+    </p>
+<br />
+    <h2>Please select which package you would like.</h2>
+
+        <p>
+        <label>
+            <InputCheckbox @bind-Value="sponsorshipRequest.FeildSign"></InputCheckbox>  Field Sponsorship/Advertising Sign 4' x 6' for 1 year- $500 - Sponsor's logo on a 4' x 6' sign to be displayed on our homerun fence.
+        </label>
+        </p>
+        <p>
+        <label>
+            <InputCheckbox @bind-Value="sponsorshipRequest.TeamsJersey"></InputCheckbox>  Team Jersey for 1 year- $450- Sponsor's name on team jerseys spring season.
+        </label>
+        </p>
+        <p>
+        <label>
+            <InputCheckbox @bind-Value="sponsorshipRequest.FieldSignAndTeamJersey"></InputCheckbox>  Choice 1 and 2 for 1 year- $700 (save $250).
+        </label>
+        </p>
+        <p>
+        <label>
+            <InputCheckbox @bind-Value="sponsorshipRequest.LargeSign"></InputCheckbox>  Large Sponsorship 4' x 8' sign for 1 year- $800 ($700 returning)- Sponsor's logo on a 4' x 8' to be displayed on backstop fence.
+        </label>
+        </p>
+        <p>
+        <label>
+            <InputCheckbox @bind-Value="sponsorshipRequest.SponsorOnePlayer"></InputCheckbox>  Sponsor A Child for 1 year- $100- Sponsor's logo on a streaming banner on our website.
+        </label>
+        </p>
+        <p>
+        <label>
+            <InputCheckbox @bind-Value="sponsorshipRequest.OtherMonetaryDonation"></InputCheckbox>  Monetary Donation $<InputNumber @bind-Value="sponsorshipRequest.DonationAmount"></InputNumber>
+        </label>
+        </p>
+
+<br />
+        <h2>Payment Information</h2>
+        <p>
+            <label>
+        How would you like to pay?
+            <InputSelect @bind-Value="sponsorshipRequest.PaymentType">
+                <option value="PaymentTypeEnum.Venmo">Venmo</option>
+                <option value="PaymentTypeEnum.Check">Check</option>
+                <option value="PaymentTypeEnum.CreditCard">Credit Card</option>
+            </InputSelect>
+        </label>
+    </p>
+
+
+<p>
+Checks can be mailed to:<br />
+Bolton Youth Baseball<br />
+C/O: Andy Roberts/Treasurer<br />
+P.O. Box 52<br />
+Bolton Ma, 01740<br />
+<br />
+Venmo: @@boltonyouthbaseball<br />
+<br />
+Tax ID: 20-5881449<br />
+ </p>
+
+    <button type="submit">Submit</button>
+</EditForm>
+
+
+@code {
+    private SponsorshipRequest sponsorshipRequest = new();
+
+    private void HandleValidSubmit()
+    {
+        Logger.LogInformation("HandleValidSubmit called");
+
+        // Process the valid form
+    }
+}
